@@ -56,7 +56,14 @@ public class IndexControlador {
     @RequestMapping(value = "/editar", method=RequestMethod.POST)
     public String editar(@ModelAttribute("empleadoForma") Empleado empleado) {
         empleadoServicio.guardarEmpleado(empleado);
-        return "redirect:/";  // redirige al path "/"
+        return "redirect:/";  // redirige a controlador "/" para recargar la vista (distinto de return "index";)
+    }
+
+    @RequestMapping(value = "/eliminar", method=RequestMethod.GET)
+    public String eliminar(@RequestParam int idEmpleado) {
+        Empleado empleado = empleadoServicio.buscarEmpleadoPorId(idEmpleado);
+        empleadoServicio.eliminarEmpleado(empleado);
+        return "redirect:/";  // redirige a controlador "/" para recargar la vista (distinto de return "index";)
     }
 
     
