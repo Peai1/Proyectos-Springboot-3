@@ -1,4 +1,4 @@
-package pipe.cuentas.model;
+package gm.cuentas.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,8 +11,8 @@ import lombok.ToString;
 
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class Cuenta {
     @Id
@@ -21,5 +21,4 @@ public class Cuenta {
     String nombre;
     String tipoCuenta;
     Double saldo;
-
 }

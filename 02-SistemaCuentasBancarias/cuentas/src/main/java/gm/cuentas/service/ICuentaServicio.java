@@ -1,8 +1,8 @@
-package pipe.cuentas.service;
+package gm.cuentas.service;
 
 import java.util.List;
 
-import pipe.cuentas.model.Cuenta;
+import gm.cuentas.model.Cuenta;
 
 public interface ICuentaServicio {
     public List<Cuenta> listarCuentas();
@@ -12,4 +12,5 @@ public interface ICuentaServicio {
     public void guardarCuenta(Cuenta cuenta);
 
     public void eliminarCuenta(Cuenta cuenta);
+
 }

@@ -1,15 +1,14 @@
-package pipe.cuentas.service;
+package gm.cuentas.service;
 
-import java.util.List;
+import gm.cuentas.model.Cuenta;
+import gm.cuentas.repository.CuentaRepositorio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import pipe.cuentas.model.Cuenta;
-import pipe.cuentas.repository.CuentaRepositorio;
+import java.util.List;
 
 @Service
-public class CuentaServicio implements ICuentaServicio {
+public class CuentaServicio implements ICuentaServicio{
 
     @Autowired
     private CuentaRepositorio cuentaRepositorio;
@@ -21,7 +20,8 @@ public class CuentaServicio implements ICuentaServicio {
 
     @Override
     public Cuenta buscarCuentaPorId(Integer idCuenta) {
-        return cuentaRepositorio.findById(idCuenta).orElse(null);
+        Cuenta cuenta = cuentaRepositorio.findById(idCuenta).orElse(null);
+        return cuenta;
     }
 
     @Override
@@ -33,5 +33,4 @@ public class CuentaServicio implements ICuentaServicio {
     public void eliminarCuenta(Cuenta cuenta) {
         cuentaRepositorio.delete(cuenta);
     }
-
 }
