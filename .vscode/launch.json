@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "EmpleadosApplication",
+            "request": "launch",
+            "mainClass": "me.empleados.EmpleadosApplication"
+        },
+        {
+            "type": "java",
+            "name": "EmpleadosApplication",
+            "request": "launch",
+            "mainClass": "me.SistemaEmpleados.EmpleadosApplication",
+            "projectName": "empleados"
+        },
+        {
+            "type": "java",
+            "name": "EmpleadosApplication",
+            "request": "launch",
+            "mainClass": "me.empleados.EmpleadosApplication",
+            "projectName": "empleados"
+        },
+        {
+            "type": "java",
+            "name": "CuentasApplication",
+            "request": "launch",
+            "mainClass": "pipe.cuentas.CuentasApplication"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CuentasApplication<cuentas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "pipe.cuentas.CuentasApplication",
+            "projectName": "cuentas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
