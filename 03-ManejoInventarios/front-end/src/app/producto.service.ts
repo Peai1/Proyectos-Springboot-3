@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductoService {
 
-  private urlBase = 'http://localhost:8080/front-end/productos';
+  private urlBase = 'http://localhost:8080/inventario-app/productos';
 
   constructor(private clienteHttp: HttpClient) { }
 
@@ -18,5 +18,17 @@ export class ProductoService {
 
   agregarProducto(producto: Producto): Observable<Object> {
     return this.clienteHttp.post(this.urlBase, producto);
+  }
+
+  obtenerProductoId(id: number) {
+    return this.clienteHttp.get<Producto>(`${this.urlBase}/${id}`);
+  }
+
+  editarProducto(id: number, producto: Producto): Observable<Object> {
+    return this.clienteHttp.put(`${this.urlBase}/${id}`, producto);
+  }
+
+  eliminarProducto(id: number): Observable<Object> {
+    return this.clienteHttp.delete(`${this.urlBase}/${id}`);
   }
 }

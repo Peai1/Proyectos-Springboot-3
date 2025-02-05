@@ -9,12 +9,14 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
 import { FormsModule } from '@angular/forms';
+import { EditarProductoComponent } from './editar-producto/editar-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductoListaComponent,
-    AgregarProductoComponent
+    AgregarProductoComponent,
+    EditarProductoComponent
   ],
   imports: [
     AppRoutingModule,
